@@ -29,6 +29,4 @@ export class AppComponent implements OnInit {
     this.list = this.catalog.slice(0, nbCake)
   }
 
-  //TODO ajouter des types de gateaux charlotte => gateau  (générique)
-
 }
