@@ -8,6 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Charlotte';
 
+  list: any[] = [];
+
+
+
+  update(nbCake){
+    this.list=[];
+    for (let i = 0; i < nbCake; i++) {
+      this.list.push({});
+    }
+
+  }
 
   //TODO  faire un système de répétition d'image avec un nombre en input
 

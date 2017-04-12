@@ -2,4 +2,8 @@
   {{title}}
 </h1>
 
-<img src="/assets/charlotte.jpg" [style.width.px]="100" [style.height.px]="100">
+<input type="number" (change)="update($event.target.value)" value="0">
+
+<div *ngFor="let element of list" style="display: inline-block">
+  <img src="/assets/charlotte.jpg" [style.width.px]="100" [style.height.px]="100">
+</div>
