@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Charlotte';
 
-  //TODO réduire la taille de l'image
 
   //TODO  faire un système de répétition d'image avec un nombre en input
 
