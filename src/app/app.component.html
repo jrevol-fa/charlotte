@@ -5,5 +5,5 @@
 <input type="number" (change)="update($event.target.value)" value="0">
 
 <div *ngFor="let element of list" style="display: inline-block">
-  <img src="/assets/charlotte.jpg" [style.width.px]="100*element.size" [style.height.px]="100*element.size">
+  <img [src]="'/assets/'+element.type+'.jpg'" [style.width.px]="100*element.size" [style.height.px]="100*element.size">
 </div>
