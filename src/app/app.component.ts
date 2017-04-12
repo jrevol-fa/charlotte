@@ -17,9 +17,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     for (let i = 0; i < 15; i++) {
-      this.catalog.push(new Cake( Math.random(),'charlotte'));
-      this.catalog.push(new Cake( Math.random(),'crumble'));
-      this.catalog.push(new Cake( Math.random(),'parisbrest'));
+      this.catalog.push(new Cake( 1+Math.random(),'charlotte'));
+      this.catalog.push(new Cake( 1+Math.random(),'crumble'));
+      this.catalog.push(new Cake( 1+Math.random(),'parisbrest'));
     }
   }
 
