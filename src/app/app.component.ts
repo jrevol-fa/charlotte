@@ -1,20 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Cake } from './cake';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: [ './app.component.css' ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
   title = 'Charlotte';
 
-  //TODO réduire la taille de l'image
+  cakeList: any[] = [];
 
-  //TODO  faire un système de répétition d'image avec un nombre en input
 
-  //TODO on passer par un service qui récupère des charlotte (du serveur) ayant une taille fixe
+  private catalog: any[] = [];
 
-  //TODO ajouter un system de taille de charlotte style.width.px
+  ngOnInit(): void {
+    for (let i = 0; i < 50; i++) {
+      this.catalog.push(new Cake(1 + Math.random(),'charlotte'));
+      this.catalog.push(new Cake(1 + Math.random(),'crumble'));
+      this.catalog.push(new Cake(1 + Math.random(),'parisbrest'));
+    }
+    console.log(this.catalog)
+  }
+
+
+  update( nbCake: number ) {
+    this.cakeList = [];
+    this.cakeList = this.catalog.slice(0, nbCake)
+  }
 
   //TODO ajouter des types de gateaux charlotte => gateau  (générique)
 
