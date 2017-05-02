@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cake } from './cake';
 
 @Component({
   selector: 'app-root',
@@ -9,21 +10,24 @@ export class AppComponent implements OnInit {
 
   title = 'Charlotte';
 
-  list: any[] = [];
+  cakeList: any[] = [];
 
 
   private catalog: any[] = [];
 
   ngOnInit(): void {
     for (let i = 0; i < 50; i++) {
-      this.catalog.push({size:1+Math.random()});
+      this.catalog.push(new Cake(1 + Math.random(),'charlotte'));
+      this.catalog.push(new Cake(1 + Math.random(),'crumble'));
+      this.catalog.push(new Cake(1 + Math.random(),'parisbrest'));
     }
+    console.log(this.catalog)
   }
 
 
-  update( nbCake ) {
-    this.list = [];
-    this.list= this.catalog.slice(0,nbCake)
+  update( nbCake: number ) {
+    this.cakeList = [];
+    this.cakeList = this.catalog.slice(0, nbCake)
   }
 
   //TODO ajouter des types de gateaux charlotte => gateau  (générique)
