@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { CakeService } from './service/cake.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: [ './app.component.css' ]
 })
 export class AppComponent {
   title = 'Charlotte';
@@ -11,14 +12,13 @@ export class AppComponent {
   list: any[] = [];
 
 
-
-  update(nbCake){
-    this.list=[];
-    for (let i = 0; i < nbCake; i++) {
-      this.list.push({});
-    }
-
+  constructor( public cakeService: CakeService ) {
   }
+
+  update( nbCake ) {
+    this.list = this.cakeService.getFirstElements(nbCake);
+  }
+
 
   //TODO  faire un système de répétition d'image avec un nombre en input
 
