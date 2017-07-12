@@ -20,7 +20,7 @@ export class AppComponent {
   }
 
 
-  //TODO corriger le titre de la page
+  //TODO corriger le titre de la page et lancer les tests unitaires
 
   //TODO afficher le gateau en fonction de sa taille
 
