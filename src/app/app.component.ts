@@ -20,12 +20,12 @@ export class AppComponent {
   }
 
 
-  //TODO  faire un système de répétition d'image avec un nombre en input
+  //TODO corriger le titre de la page
 
-  //TODO on passer par un service qui récupère des charlotte (du serveur) ayant une taille fixe
+  //TODO afficher le gateau en fonction de sa taille
 
-  //TODO ajouter un system de taille de charlotte style.width.px
+  //TODO afficher le type de gateau
 
-  //TODO ajouter des types de gateaux charlotte => gateau  (générique)
+  //TODO rajouter une mention "sélectionné pour vous" en fonction du tye de gateau et de la taille
 
 }
