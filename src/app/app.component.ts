@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CakeService } from './service/cake.service';
+import { CakeService } from './cake/cake.service';
 
 @Component({
   selector: 'app-root',
