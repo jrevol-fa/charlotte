@@ -10,13 +10,13 @@ import { Cake } from './cake/cake';
 export class AppComponent {
   title = 'Johanna';
 
-  list: Cake[] = [];
+  cakeList: Cake[] = [];
 
   constructor( public cakeService: CakeService ) {
   }
 
   update( nbCake ) {
-    this.list = this.cakeService.getFirstElements(nbCake);
+    this.cakeList = this.cakeService.getFirstElements(nbCake);
   }
 
 
