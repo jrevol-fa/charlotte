@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CakeService } from './cake/cake.service';
+import { Cake } from './cake/cake';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { CakeService } from './cake/cake.service';
 export class AppComponent {
   title = 'Johanna';
 
-  list: any[] = [];
+  list: Cake[] = [];
 
   constructor( public cakeService: CakeService ) {
   }
