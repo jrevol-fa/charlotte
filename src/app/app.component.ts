@@ -7,10 +7,9 @@ import { CakeService } from './cake/cake.service';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent {
-  title = 'Charlotte';
+  title = 'Johanna';
 
   list: any[] = [];
-
 
   constructor( public cakeService: CakeService ) {
   }
