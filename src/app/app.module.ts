@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { CakeService } from './cake/cake.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { CakeService } from './cake/cake.service';
   imports: [
     BrowserModule,
     FormsModule,
+    CommonModule,
     HttpModule
   ],
   providers: [CakeService],

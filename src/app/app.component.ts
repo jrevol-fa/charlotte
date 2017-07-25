@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CakeService } from './cake/cake.service';
 
 @Component({
@@ -6,13 +6,19 @@ import { CakeService } from './cake/cake.service';
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
   title = 'Charlotte';
 
+  initialNbCake = 10;
   list: any[] = [];
 
-
   constructor( public cakeService: CakeService ) {
+  }
+
+
+  ngOnInit(): void {
+    this.update(this.initialNbCake)
   }
 
   update( nbCake ) {
