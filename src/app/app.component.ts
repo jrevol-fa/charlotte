@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Cake } from './cake';
+import { CakeService } from './cake/cake.service';
 
 @Component({
   selector: 'app-root',
@@ -10,26 +10,28 @@ export class AppComponent implements OnInit {
 
   title = 'Charlotte';
 
-  cakeList: any[] = [];
+  initialNbCake = 10;
+  list: any[] = [];
 
+  constructor( public cakeService: CakeService ) {
+  }
 
-  private catalog: any[] = [];
 
   ngOnInit(): void {
-    for (let i = 0; i < 50; i++) {
-      this.catalog.push(new Cake(1 + Math.random(),'charlotte'));
-      this.catalog.push(new Cake(1 + Math.random(),'crumble'));
-      this.catalog.push(new Cake(1 + Math.random(),'parisbrest'));
-    }
-    console.log(this.catalog)
+    this.update(this.initialNbCake)
+  }
+
+  update( nbCake ) {
+    this.list = this.cakeService.getFirstElements(nbCake);
   }
 
 
-  update( nbCake: number ) {
-    this.cakeList = [];
-    this.cakeList = this.catalog.slice(0, nbCake)
-  }
+  //TODO corriger le titre de la page et lancer les tests unitaires
 
-  //TODO ajouter des types de gateaux charlotte => gateau  (générique)
+  //TODO afficher le gateau en fonction de sa taille
+
+  //TODO afficher le type de gateau
+
+  //TODO rajouter une mention "sélectionné pour vous" en fonction du tye de gateau et de la taille
 
 }

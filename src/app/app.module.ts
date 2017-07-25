@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { CakeService } from './cake/cake.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
+    CommonModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CakeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

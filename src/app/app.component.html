@@ -2,6 +2,8 @@
   {{title}}
 </h1>
 
-<div *ngFor="let cake of cakeList" style="display: inline-block">
-  <img [src]="cake.getUrl()" [style.width.px]="100*cake.size" [style.height.px]="100*cake.size">
+<input type="number" (change)="update($event.target.value)"  (load)="update($event.target.value)" [value]="initialNbCake">
+
+<div *ngFor="let element of list" style="display: inline-block">
+  <img src="/assets/charlotte.jpg" [style.width.px]="100" [style.height.px]="100">
 </div>
