@@ -19,6 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/UXG/dist/assets/css/foundation-sites.css",
+        "../node_modules/UXG/dist/assets/css/app.css",
+        "../node_modules/UXG/dist/assets/css/fonts.css",
         "styles.css"
       ],
       "scripts": [],

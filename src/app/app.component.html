@@ -1,9 +1,31 @@
-<h1>
+<style>
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .inline-block { display: inline-block; }
+
+
+</style>
+<h1 class="margin-v-l text-center">
   {{title}}
 </h1>
 
-<input type="number" (change)="update($event.target.value)" [value]="initialNbCake">
 
-<div *ngFor="let element of list" style="display: inline-block">
-  <img src="/assets/charlotte.jpg" [style.width.px]="100" [style.height.px]="100">
+<div class="row bg-white z-depth-2">
+  <div class="medium-12 padding-all-xl columns">
+    <div class="row">
+      <div class="small-2 small-centered margin-b-xl columns">
+        <input type="number" (change)="update($event.target.value)" [value]="initialNbCake">
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <div *ngFor="let element of list" class="margin-all-xs inline-block">
+          <img src="/assets/charlotte.jpg" [style.width.px]="100" [style.height.px]="100">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
